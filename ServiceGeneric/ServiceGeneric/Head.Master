@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#"    %>
+
+<html>
+<head>
+  <title></title>
+    <style type="text/css">
+        #Mode
+        {
+            width: 132px;
+        }
+
+        #Border 
+        {
+           border: 1px solid black;
+        }
+
+        #Border tr
+        {
+           border: 1px solid black;
+        }
+
+       		/*********************************/
+			/* Menu horizontal (items flottants) */
+			/*********************************/
+			#nav {
+				list-style: none ;
+				margin: 0 ;
+				padding: 0 ;
+				overflow: hidden ;	/* Création du contexte de formatage */
+				}
+			#nav li {
+				float: left ;
+				width: 150px ;
+				border: 1px solid #600 ;
+				margin-right: 1px ;
+				color: #fff ;
+				background: #c00 ;
+				}
+			#nav li a {
+				display: block ;
+				background: #c00 ;
+				color: #fff ;
+				font: 1em "Trebuchet MS",Arial,sans-serif ;
+				line-height: 1em ;
+				padding: 4px 0 ;
+				text-align: center ;
+				text-decoration: none ;
+				}
+			#nav li a:hover, #nav li a:focus, #nav li a:active {
+				background: #900 ;
+				text-decoration: underline ;
+				}
+
+            #nav ul li a.active {background:#ff9900; color:#ffffff;} 
+      
+        #titre  {
+            text-align: match-parent;padding-bottom: 10px;padding-top: 10px;font-size:x-large; color:#1F3974;  font-family: Garamond;
+        }
+        #titre span {
+              padding-left: 100px;
+        }
+
+
+        .alert-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+        .alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+        .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+        .alert-success {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        html, body, tbody {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+        .ErreurConfig {
+              color: #a94442;
+             background-color: #fcf8e3;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+  
+<div style="text-align: match-parent;">
+<img style="width: 181px; height: 50px;"
+ alt="logo" src="Logo.jpg"/>
+</div>
+    <div id="titre" >
+       <asp:Titre  />   
+        </div>
+ <div style="width:100%;">
+<ul id="nav"> 
+<li  ><a href="Default.aspx">Accueil</a></li> 
+<li ><a href="Traitement.aspx">Traitement</a></li>
+<li  ><a href="Config.aspx">Config</a></li> 
+<li ><a href="LogFile.aspx">Fichier d'erreur</a></li>
+<li  ><a href="Trace.aspx">Trace</a></li>
+</ul> 
+</div>
+
+ 
+ <asp:ContentPlaceHolder ID="Zone1" runat="server">
+        
+ </asp:ContentPlaceHolder>
+  
+</body>
+</html>
